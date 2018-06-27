@@ -1,0 +1,11 @@
+<h1>About Parker Chorale</h1>
+<h2><%= link_to "Create a new dude.", new_about_page_item_path %>
+<% @about_page_items.each do |item| %>
+  <p>
+    <%= item.name %>
+    <%= item.role %>
+    <%= item.bio %>
+    <%= link_to "Edit this item", edit_about_page_item_path(item) %>
+    <%= link_to "Delete this item", item, method: :delete, data: { confirm: 'You sure?' } %>
+  </p>
+<% end %>

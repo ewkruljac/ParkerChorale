@@ -1,0 +1,20 @@
+<h1>Fill Out The Form</h1>
+
+<%= form_with model: @about_page_item, local: true do |form| %>
+  <% if @about_page_item.errors.any? %>
+    <% @about_page_item.errors.full_messages.each do |msg| %>
+      <p><%= msg %></p>
+    <% end %>
+  <% end %>
+
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+
+  <%= form.label :role %>
+  <%= form.text_field :role %>
+
+  <%= form.label :bio %>
+  <%= form.text_area :bio %>
+
+  <%= form.submit %>
+<% end %>
