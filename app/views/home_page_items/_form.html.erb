@@ -1,0 +1,15 @@
+<h1>Fill out the form</h1>
+
+<%= form_with model: @home_page_item, local: true do |form| %>
+
+  <% if @home_page_item.errors.any? %>
+    <% @home_page_item.errors.full_messages.each do |msg| %>
+      <p><%= msg %></p>
+    <% end %>
+  <% end %>
+
+  <%= form.label :summary %>
+  <%= form.text_field :summary %>
+
+  <%= form.submit %>
+<% end %>
