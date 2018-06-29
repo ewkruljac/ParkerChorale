@@ -1,0 +1,11 @@
+<h1>Events</h1>
+
+<% @events.each do |event| %>
+  <p>
+    <%= event.title %>
+    <%= event.start_date %>
+    <%= event.end_date %>
+    <%= event.ticket_url %>
+    <%= event.you_tube_url %>
+  </p>
+<% end %>

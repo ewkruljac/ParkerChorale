@@ -1,0 +1,11 @@
+<h1>Manage Events</h1>
+
+<%= link_to "Create New Event", new_event_path %>
+
+<% @events.each do |event| %>
+  <p>
+    <%= event.title %>
+    <%= link_to "Update Info", edit_event_path(event) %>
+    <%= link_to "Delete Event", event, method: :delete, data: { confirm: "You sure?" } %>
+  </p>
+<% end %>

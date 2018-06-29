@@ -1,0 +1,24 @@
+<%= form_with model: @event, local: true do |form| %>
+  <% if @event.errors.any? %>
+    <% @event.errors.full_messages.each do |msg| %>
+      <p><%= msg %></p>
+    <% end %>
+  <% end %>
+
+  <%= form.label :title %>
+  <%= form.text_field :title %>
+
+  <%= form.label :start_date %>
+  <%= form.datetime_field :start_date %>
+
+  <%= form.label :end_date %>
+  <%= form.datetime_field :end_date %>
+
+  <%= form.label :ticket_url %>
+  <%= form.text_field :ticket_url %>
+
+  <%= form.label :you_tube_url %>
+  <%= form.text_field :you_tube_url %>
+
+  <%= form.submit %>
+<% end %>

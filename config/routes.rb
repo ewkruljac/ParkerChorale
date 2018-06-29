@@ -8,4 +8,5 @@ Rails.application.routes.draw do
 
   get '/about_us', to: 'about_page_items#index'
 
+  get '/manage_events', to: 'events#manage_events'
 end
