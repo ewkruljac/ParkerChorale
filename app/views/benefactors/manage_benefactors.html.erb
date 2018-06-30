@@ -1,0 +1,10 @@
+<h1>Manage Benefactors</h1>
+
+<% @benefactors.each do |benefactor| %>
+  <p>
+    <%= benefactor.name %>
+    <%= link_to "Edit", edit_benefactor_path(benefactor) %>
+    <%= link_to "Delete", benefactor, method: :delete, 
+                                      data: { confirm: "You sure?" } %>
+  </p>
+<% end %>

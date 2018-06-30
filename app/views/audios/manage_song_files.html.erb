@@ -5,6 +5,7 @@
     <%= audio_file.title %>
     <%= audio_file.event.title %>
     <%= link_to "Edit", edit_audio_path(audio_file) %>
-    <%= link_to "Delete", audio_file, method: :delete, data: { confirm: "You sure?" } %>
+    <%= link_to "Delete", audio_file, method: :delete, 
+                                      data: { confirm: "You sure?" } %>
   </p>
 <% end %>

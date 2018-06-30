@@ -1,0 +1,15 @@
+<%= form_with model: @benefactor, local: true do |form| %>
+  <% if @benefactor.errors.any? %>
+    <% @benefactor.errors.full_messages.each do |msg| %>
+      <%= msg %>
+    <% end %>
+  <% end %>
+
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+
+  <%= form.label :image_caption %>
+  <%= form.text_area :image_caption %>
+
+  <%= form.submit %>
+<% end %>
