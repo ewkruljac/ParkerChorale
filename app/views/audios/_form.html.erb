@@ -1,0 +1,19 @@
+<% if @events.blank? %>
+  <p>Please create an <%= link_to "Event", new_event_path %> before uploading files.</p>
+<% else %>
+  <%= form_with model: @audio_file, local: true do |form| %>
+    <% if @audio_file.errors.any? %>
+      <% @audio_file.errors.full_messages.each do |msg| %>
+        <p><%= msg %></p>
+      <% end %>
+    <% end %>
+
+    <%= form.label :event_id, 'Event' %>
+    <%= form.collection_select :event_id, Event.all, :id, :title %>
+
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+
+    <%= form.submit %>
+  <% end %>
+<% end %>
