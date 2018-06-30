@@ -1,0 +1,18 @@
+<%= form_with model: @generous_supporter, local: true do |form| %>
+  <% if @generous_supporter.errors.any? %>
+    <% @generous_supporter.errors.full_messages.each do |msg| %>
+      <%= msg %>
+    <% end %>
+  <% end %>
+
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+
+  <%= form.label :website_url %>
+  <%= form.text_field :website_url %>
+
+  <%= form.label :category %>
+  <%= form.select :category, ['business', 'individual'] %>
+
+  <%= form.submit %>
+<% end %>

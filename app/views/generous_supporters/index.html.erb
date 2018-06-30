@@ -1,0 +1,9 @@
+<h1>Generous Supporters</h1>
+
+<% @generous_supporters.each do |supporter| %>
+  <p>
+    <%= supporter.name %>
+    <%= supporter.website_url %>
+    <%= supporter.category %>
+  </p>
+<% end %>

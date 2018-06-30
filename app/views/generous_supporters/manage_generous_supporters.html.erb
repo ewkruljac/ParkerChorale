@@ -1,0 +1,11 @@
+<h1>Manage Generous Supporters</h1>
+
+<% @generous_supporters.each do |generous_supporter| %>
+  <p>
+    <%= generous_supporter.name %>
+    <%= link_to "Edit", edit_generous_supporter_path(generous_supporter) %>
+    <%= link_to "Delete", generous_supporter_path(generous_supporter), 
+                          method: :delete,
+                          data: { confirm: "You sure?" } %>
+  </p>
+<% end %>

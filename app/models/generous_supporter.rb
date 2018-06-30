@@ -1,0 +1,2 @@
+class GenerousSupporter < ApplicationRecord
+end
