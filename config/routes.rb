@@ -15,4 +15,5 @@ Rails.application.routes.draw do
   get '/manage_generous_supporters', to: 'generous_supporters#manage_generous_supporters'
   get '/manage_benefactors',         to: 'benefactors#manage_benefactors'
   get '/support_us',                 to: 'benefactors#index'
+  get '/contact_us',                 to: 'contacts#contact'
 end
