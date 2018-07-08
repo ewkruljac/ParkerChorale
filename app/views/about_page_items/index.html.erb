@@ -1,13 +1,22 @@
-<h1>About Parker Chorale</h1>
-<h2><%= link_to "Create a new dude.", new_about_page_item_path %>
-<% @about_page_items.each do |item| %>
-  <p>
-    <%= item.name %>
-    <%= item.role %>
-    <%= item.bio %>
-    <%= link_to "Edit this item", edit_about_page_item_path(item) %>
-    <%= link_to "Delete this item", item, method: :delete, data: { confirm: 'You sure?' } %>
-  </p>
-<% end %>
+<div class="row mt-40">
+  <% @about_page_items.each do |about_page_item| %>
+    <div class="col-md-4"> 
+      <div class="card" style="width: 18rem;">
+        <div class="card-header">
+          <strong><%= about_page_item.name %></strong>
+        </div>
+    
+        <div class="card-body">
+          <%= image_tag("paul_smith", class: 'card-img-top') %>
+          <p><em><%= about_page_item.role %></em></p>
+          <p class="card-text">
+            <%= about_page_item.bio %>
+          </p>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+
 
 <!-- create a manage_about_page view/controller/route -->
