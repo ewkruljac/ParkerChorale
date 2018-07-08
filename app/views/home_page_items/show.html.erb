@@ -1,7 +1,40 @@
+<main role="main">
+  <div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <%= image_tag("sheet_music_cover", class: "first-slide") %>
+        <div class="container">
+          <div class="carousel-caption text-left">
+            <h1 class="">Parker Chorale - <em>Sharing The Gift of Song</em></h1>
+            <p>
+              <%= @home_page_item.summary %>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container marketing mt-20">
+    <div class="row">
+      <div class="col-lg-4">
+        <%= image_tag("chorale_logo",  width: '100', height: '60') %>
+        <p class="mt-20"><a class="btn btn-block btn-primary" href="#" role="button">Buy Tickets! &raquo;</a></p>
+      </div>
+
+      <div class="col-lg-4">
+        <%= image_tag("youtube_logo",  width: '140', height: '60') %>
+        <p class="mt-20"><a class="btn btn-block btn-primary" href="" role="button">Subscribe &raquo;</a></p>
+      </div>
+      <div class="col-lg-4">
+        <%= image_tag("facebook_logo",  width: '60', height: '60') %>
+        <p class="mt-20"><a class="btn btn-block btn-primary" href="#" role="button">Like and Follow Us &raquo;</a></p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<%= link_to "Edit - Put me on the manage page", edit_home_page_item_path(@home_page_item) %>
 
 
-<h1>HomePage</h1>
 
-<%= @home_page_item.summary %>
-
-<%= link_to "Edit", edit_home_page_item_path(@home_page_item) %>
