@@ -1,4 +1,6 @@
 class GenerousSupportersController < ApplicationController
+  layout "generous_supporters"
+  
   def new
     @generous_supporter = GenerousSupporter.new
   end

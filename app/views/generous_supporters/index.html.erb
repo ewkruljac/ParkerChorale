@@ -1,9 +1,31 @@
-<h1>Generous Supporters</h1>
+<h1>Our Generous Supporters</h1>
+<p>Parker Chorale would like to extend thanks to the following generous Supporters.</p>
+<p>Contact Us to learn how to contribute.</p>
 
-<% @generous_supporters.each do |supporter| %>
-  <p>
-    <%= supporter.name %>
-    <%= supporter.website_url %>
-    <%= supporter.category %>
-  </p>
-<% end %>
+<div class="row mt-40">
+  <div class="col-md-6">
+    <% @generous_supporters.each do |supporter| %>
+    <div class="card mt-40">
+      <h5 class="card-header"><%= supporter.name %></h5>
+      <div class="card-body">
+        <a href="<%= supporter.website_url %>" class="card-title"><%= image_tag "comp-tutor", class: 'card-img-top' %></a>
+        <p class="card-text">555-555-5555</p> <!-- add phone column to table -->
+      </div>
+    </div>
+    <% end %>
+  </div>
+
+  <div class="col-md-4 offset-md-2">
+    <!-- Individuals go here -->
+    <div class="card mt-40" style="width: 18rem;">
+      <div class="card-header">
+        Thank You To the Following Individuals
+      </div>
+      <ul class="list-group list-group-flush">
+        <% @generous_supporters.each do |supporter| %>
+          <li class="list-group-item"><%= supporter.name %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>

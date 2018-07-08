@@ -6,22 +6,24 @@
   <div class="collapse navbar-collapse" id="navbarCollapse">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <%= link_to root_path, class: 'nav-link' do %>
+          Home<span class="sr-only">(current)</span>
+        <% end %>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">About</a>
+        <%= link_to "About", about_us_path, class: 'nav-link' %>
       </li>
       <li class="nav-item">
-        <a class="nav-link disabled" href="#">Hear Us Sing</a>
+        <%= link_to "Hear Us Sing", hear_us_sing_path, class: 'nav-link' %>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Support Us</a>
+        <%= link_to "Support Us", support_us_path, class: 'nav-link' %>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Our Generous Supporters</a>
+        <%= link_to "Our Generous Supporters", generous_supporters_path, class: 'nav-link' %>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Contact</a>
+        <%= link_to "Contact", contact_us_path, class: 'nav-link' %>
       </li>
     </ul>
     
