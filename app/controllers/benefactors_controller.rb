@@ -1,4 +1,6 @@
 class BenefactorsController < ApplicationController
+  layout 'support_us'
+  
   def new
     @benefactor = Benefactor.new
   end

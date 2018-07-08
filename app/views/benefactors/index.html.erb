@@ -1,7 +1,66 @@
-<h1>Support Us</h1>
+<main role="main">
+  <h1 class="mt-40">Support Us</h1>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <% @benefactors.each_with_index do |benefactor, index| %>
+        <li data-target='#MyCarousel' data-slide-to="#{index}" class="#{'active' if index == 0}"></li>
+      <% end %>
+    </ol>
 
-<% @benefactors.each do |benefactor| %>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <%= image_tag "2014-grant-check" %> <!-- change this to @benefactors.first.image_url -->
+        <div class="container">
+          <div class="carousel-caption text-left">
+            <h1>Benefactor Name Goes Here</h1>
+            <p><%= @benefactors.first.image_caption %></p>
+          </div>
+        </div>
+      </div>
+
+      <% @benefactors.drop(1).each do |benefactor| %>
+      <div class="carousel-item">
+        <%= image_tag "phs-donation-2" %><!-- change this to benefactor.image_url -->
+        <div class="container">
+          <div class="carousel-caption text-left">
+            <h1>Benefactor Name Goes Here</h1>
+            <p><%= benefactor.image_caption %></p>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </div>
+
+    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
   <p>
-    <%= benefactor.image_caption %>
+    Ticket sales account for only a small part of the Parker Chorale's expenses, so we count on donations from organizations and individuals to meet our annual budget. The generosity of our patrons allows us to reserve weekly rehearsal space, purchase music, hire the best instrumentalists & conductors, and support music education in our community through our Parker Chorale Grant Program that provides funding for Douglas County School District High School Vocal Music Programs.
   </p>
-<% end %>
+
+  <p>
+    The Parker Chorale is a 501c3 (non-profit) organization incorporated in the State of Colorado so all contributions are 100% tax-deductible. Patrons can make a general contribution, sponsor a concert, place an ad in our programs and/or be a part of our Generous Supporters page on this website.
+  </p>
+
+  <p>
+    For more information on supporting the Parker Chorale and music education in Douglas County, please email us.
+  </p>
+
+  <p>Click here to make a donation:</p>
+
+  <p><%= image_tag "donation_image" %></p>
+
+  <p>or Checks may be sent to:</p>
+  <p>Parker Chorale</p>
+  <p>17051 Numa Pl. Parker, CO 80134</p>
+</main>
+
+
+
