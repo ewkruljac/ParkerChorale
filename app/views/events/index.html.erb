@@ -1,21 +1,25 @@
-<h1 class="mt-80">Events</h1>
+<h1 class="mt-80 text-center">Hear Us Sing</h1>
+<p class="text-center">Catch us at one of our upcoming performances, or check out videos of some of our past performances.</p>
 
-<div class="row">
-  <div class="col-md-12 ">
-    <% @events.each do |event| %>
-      <div class="card w-50" style="width: 18rem;">
+<% @events.each do |event| %>
+  <div class="row mt-80">
+    <div class="col-md-6">
+      <div class="card w-75" style="width: 18rem;">
         <div class="card-header">
           <strong><%= event.title %></strong><em><%= event.start_date %> - <%= event.end_date %></em>
         </div>
-    
         <div class="card-body">
-          <%= image_tag("chorale_logo", class: 'card-img-top') %>
+          <%= image_tag("Classic-Parker-Holiday_2016", class: 'card-img-top') %>
           <p class="card-text">
-            <a href="<%= event.ticket_url %>">Buy Tickets</a>
-            <a href="<%= event.you_tube_url %>">Make me into embedded youtube</a>
+            <a class="btn btn-block btn-primary mt-10" href="#" role="button">Buy Tickets! &raquo;</a>
           </p>
         </div>
       </div>
-    <% end %>
+    </div>
+
+    <div class="col-md-6">
+      <iframe width="500" height="290" src="https://www.youtube.com/embed/mSkISrG2474" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
   </div>
-</div>
+<% end %>
+

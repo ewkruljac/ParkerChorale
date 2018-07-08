@@ -1,16 +1,18 @@
 <main role="main">
-  <div>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <%= image_tag("sheet_music_cover", class: "first-slide") %>
-        <div class="container">
-          <div class="carousel-caption text-left">
-            <h1 class="">Parker Chorale - <em>Sharing The Gift of Song</em></h1>
-            <p>
-              <%= @home_page_item.summary %>
-            </p>
-          </div>
-        </div>
+
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <%= image_tag("homepage_background", class: "first-slide") %>
+    </div>
+  </div>
+
+  <div class="container mt-40">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="">Parker Chorale - <em>Sharing The Gift of Song</em></h1>
+        <p>
+          <%= @home_page_item.summary %>
+        </p>
       </div>
     </div>
   </div>
@@ -21,17 +23,17 @@
         <%= image_tag("chorale_logo",  width: '200', height: '80') %>
         <p class="mt-40"><a class="btn btn-block btn-primary" href="#" role="button">Buy Tickets! &raquo;</a></p>
       </div>
-
       <div class="col-lg-4">
         <%= image_tag("youtube_logo",  width: '240', height: '80') %>
-        <p class="mt-40"><a class="btn btn-block btn-primary" href="" role="button">Subscribe &raquo;</a></p>
+        <p class="mt-40"><a class="btn btn-block btn-primary" href="https://www.youtube.com/channel/UCULrEMrY4fjYDY-JyPiIf2w" role="button" target="_blank">Subscribe &raquo;</a></p>
       </div>
       <div class="col-lg-4">
         <%= image_tag("facebook_logo",  width: '80', height: '80') %>
-        <p class="mt-40"><a class="btn btn-block btn-primary" href="#" role="button">Like and Follow Us &raquo;</a></p>
+        <p class="mt-40"><a class="btn btn-block btn-primary" href="https://www.facebook.com/parkerchorale/" role="button", target="_blank">Like and Follow Us &raquo;</a></p>
       </div>
     </div>
   </div>
+
 </main>
 
 <%= link_to "Edit - Put me on the manage page", edit_home_page_item_path(@home_page_item) %>
