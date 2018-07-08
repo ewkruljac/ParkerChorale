@@ -1,4 +1,6 @@
 class HomePageItemsController < ApplicationController
+  layout "home"
+  
   def show
     @home_page_item = HomePageItem.first
   end

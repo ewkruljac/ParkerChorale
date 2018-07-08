@@ -1,4 +1,6 @@
 class AboutPageItemsController < ApplicationController
+  layout "about"
+
   def new
     @about_page_item = AboutPageItem.new
   end

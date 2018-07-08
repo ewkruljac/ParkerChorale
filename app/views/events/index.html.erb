@@ -1,11 +1,21 @@
-<h1>Events</h1>
+<h1 class="mt-80">Events</h1>
 
-<% @events.each do |event| %>
-  <p>
-    <%= event.title %>
-    <%= event.start_date %>
-    <%= event.end_date %>
-    <%= event.ticket_url %>
-    <%= event.you_tube_url %>
-  </p>
-<% end %>
+<div class="row">
+  <div class="col-md-12 ">
+    <% @events.each do |event| %>
+      <div class="card w-50" style="width: 18rem;">
+        <div class="card-header">
+          <strong><%= event.title %></strong><em><%= event.start_date %> - <%= event.end_date %></em>
+        </div>
+    
+        <div class="card-body">
+          <%= image_tag("chorale_logo", class: 'card-img-top') %>
+          <p class="card-text">
+            <a href="<%= event.ticket_url %>">Buy Tickets</a>
+            <a href="<%= event.you_tube_url %>">Make me into embedded youtube</a>
+          </p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

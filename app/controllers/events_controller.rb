@@ -1,4 +1,6 @@
 class EventsController < ApplicationController
+  layout 'hear_us_sing'
+  
   def new
     @event = Event.new
   end
